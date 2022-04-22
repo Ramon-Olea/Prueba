@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Prueba</b>',
+    'logo' => '<b>Prueba Laravel</b>',
     'logo_img' => 'vendor/adminlte/dist/img/102875852.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -258,6 +258,13 @@ return [
         [
             'text'        => 'Comprar Productos',
             'url'         => 'articulosGeneral',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 'Ver',
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Listado de Compras',
+            'url'         => 'Compras',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 'Ver',
             'label_color' => 'success',

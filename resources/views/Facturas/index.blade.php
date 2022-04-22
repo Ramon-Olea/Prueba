@@ -3,11 +3,11 @@
 @section('title', 'PRUEBA')
 
 @section('content_header')
-    <h1>Listado de artículos</h1>
+    <h1>Listado de Facturas</h1>
 @stop
 
 @section('content')
-   <a href="articulos/create" class="btn btn-primary mb-3">CREAR</a>
+
 
 <table id="articulos" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%">
     <thead class="bg-primary text-white">
@@ -15,7 +15,7 @@
             <th scope="col">ID</th>
             <th scope="col">Código</th>
             <th scope="col">Descripción</th>
-            <th scope="col">Impuesto</th>
+            <th scope="col">Impuesto </th>
             <th scope="col">Precio</th>
             <th scope="col">Acciones</th>
         </tr>
@@ -29,11 +29,9 @@
             <td>{{$articulo->cantidad}}</td>
             <td>{{$articulo->precio}}</td>
             <td>
-                <form action="{{ route ('articulos.destroy',$articulo->id)}}" method="POST">
-                <a href="/articulos/{{ $articulo->id}}/edit" class="btn btn-info">Editar</a>
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-danger">Borrar</button>
+                <form action="{{ route ('articulosGeneral.destroy',$articulo->id)}}" method="POST">
+                <a {{-- href="/articulosGeneral/{{ $articulo->id}}/edit" --}} class="btn btn-success">VER</a>
+
                 </form>
             </td>
         </tr>

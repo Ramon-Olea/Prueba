@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::resource('articulos','App\Http\Controllers\ArticuloController');
 Route::resource('articulosGeneral','App\Http\Controllers\articulosGeneralController');
+Route::resource('Facturas','App\Http\Controllers\FacturasController');
+Route::resource('Compras','App\Http\Controllers\ComprasController');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
